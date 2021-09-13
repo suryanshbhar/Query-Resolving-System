@@ -16,8 +16,7 @@ import os
 import numpy as np
 import sklearn
 from sklearn.metrics.pairwise import cosine_similarity
-import gensim
-from gensim.parsing.preprocessing import remove_stopwords
+
 #######################################################################################
 from sentence_transformers import SentenceTransformer
 model = SentenceTransformer('sentence-transformers/bert-base-nli-stsb-mean-tokens')
@@ -50,8 +49,7 @@ def clean_sentence(sentence,stopwords=False):
     sentence=sentence.lower().strip()
     sentence=re.sub(r'[^a-z0-9\s]','',sentence)
     
-    if stopwords:
-        sentence=remove_stopwords(sentence)
+ 
         
     return sentence
 
