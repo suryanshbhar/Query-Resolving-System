@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+	<title>RGB to GreyScale</title>
+</head>
+<body>
+
+    <div class="split left">
+        <div class="container">
+
+
+        <div id="stat_content">
+            <h3 class="whiteTextOverride">Corpus</h3>
+
+			{% if text %}
+			<p><i>{{ text }}</i></p>
+
+			{% else %}
+			<p>No text to show</p>
+			{% endif %}
+
+		</div>
+
+        </div>
+      </div>
+      
+      <div class="split right">
+        <div class="container">
+            <a class="btn btn-outline-secondary btn-lg btn-block" href="/convert" role="button">Ask Another Query</a>
+           <div id="stat_content">
+            <br>
+            <h5>Query</h5>
+
+			{% if question %}
+			<div>{{ question }}</div>
+
+			{% else %}
+			<p>No text to show</p>
+			{% endif %}
+
+            <br>
+            
+
+            <h5>Answer using Word Tagging</h5>
+            {% if ans %}
+			<div>{{ ans }}</div>
+
+			{% else %}
+			<p>No text to show</p>
+			{% endif %}
+            <br>
+            <h5>Contextually Similar Answers</h5>
+            <div class="table-responsive">
+              
+                <table class="table table-bordered table-hover table-secondary">
+                    <thead>
+                      <tr>
+                        <th scope="col">Rank</th>
+                        <th scope="col">Sentence</th>
+                        <th scope="col">Score</th>
+                     
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>{{answer_list[0]}}</td>
+                        <td>{{scores[0]}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>{{answer_list[1]}}</td>
+                        <td>{{scores[1]}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>{{answer_list[2]}}</td>
+                        <td>{{scores[2]}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>{{answer_list[3]}}</td>
+                        <td>{{scores[3]}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>{{answer_list[4]}}</td>
+                        <td>{{scores[4]}}</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+        
+            </div>
+
+        
+
+		</div>
+
+
+        </div>
+      </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

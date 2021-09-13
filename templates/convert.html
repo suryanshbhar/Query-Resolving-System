@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+	<title>Query Resolving System</title>
+
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+	<header class="site-header">
+	  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+	    <div class="container">
+	      <a class="navbar-brand mr-4" href="/convert">Query Resolver</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="navbar-toggler-icon"></span>
+	      </button>
+	      <div class="collapse navbar-collapse" id="navbarToggle">
+	        <div class="navbar-nav mr-auto">
+	          <a class="nav-item nav-link" href="/">Home</a>
+	        </div>
+	        <!-- Navbar Right Side -->
+	        <div class="navbar-nav">
+	          <a class="nav-item nav-link" href="/about">About</a>
+	        </div>
+	      </div>
+	    </div>
+	  </nav>
+	</header>
+
+	<div class="container">
+	
+		<form action="/convert" method="POST" enctype="multipart/form-data" >
+			
+			<div class="form-group">
+
+			<label for="text"><h6>Enter custom text corpus or select from below</h6></label>
+
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+				  <label class="input-group-text" for="inputGroupSelect01">Sample Corpus</label>
+				</div>
+				<select class="custom-select" id="inputGroupSelect01">
+				  <option selected>Choose...</option>
+				  <option value="1"  
+				  myTag="Success from two leading coronavirus vaccine programs likely means other frontrunners will also show strong protection against COVID-19, Bill Gates said Tuesday.
+
+
+The fact that two coronavirus vaccines recently showed strong protection against COVID-19 bodes well for other leading programs led by AstraZeneca, Novavax, and Johnson & Johnson, Bill Gates said Tuesday.The billionaire Microsoft founder and philanthropist said it will be easier to boost manufacturing and distribute these other shots to the entire world, particularly developing nations.The vaccine space has seen a flurry of good news in recent days, marked by overwhelming success in late-stage trials by both Pfizer and Moderna. The studies showed both vaccines provided strong protection against the virus compared to a placebo. 
+'With the very good news from Pfizer and Moderna, we think it's now likely that AstraZeneca, Novavax, and Johnson & Johnson will also likely show very strong efficacy,' Gates told journalist Andrew Ross Sorkin. 
+While Gataes didn't delve into the scientific rationale behind that prediction, many scientists hold the same hope. All the leading vaccine candidates target the same part of the coronavirus in the spike protein. Early-stage clinical trials showed all the shots elicited varying levels of neutralizing antibodies, virus-fighting proteins that play a critical role in the body's immune response. But the only way to know if that translates to protection is by running late-stage trials that enroll tens of thousands for volunteers who receive either the experimental shot or placebo injections. The scientific success has turned the top challenges surrounding a COVID-19 vaccine to the manufacturing and distribution front. Gates noted that the world will be supply constrained for 2021, but these additional vaccines will prove valuable on that front.">Covid-19</option>
+				
+<option value="2"  myTag="A bite from a spider somehow granted teenager Peter Parker its arachnid abilities and instead of using them for personal gain, he decided to help others with them. An orphan living with his aunt, May Parker, the boy chose to wear a mask while fighting crime so as not to burden her with his actions.
+
+Calling himself Spider-Man and sporting a pair of web-shooting devices he’d constructed, Parker wound up in internet videos which attracted the attention of Tony Stark. The billionaire industrialist deduced Spider-Man’s secret identity and approached Parker at his and May’s home in Queens, New York with a request for aid from the hero in an upcoming confrontation with Captain America and a group of other rogue Avengers and associates. Parker was initially hesitant to even admit his secret career as Spider-Man, but the thrill of adventure and Stark’s talk of responsibility drew him in and he accepted the invitation, as well as a new, high-tech costume and web-shooters.">Spider-man</option>
+
+
+				  
+				  
+				
+				</select>
+			  </div>
+			  <textarea class="form-control" name="text" id="text" rows="11" required>{{text}}</textarea>
+			
+
+
+			  <script>
+					$("#inputGroupSelect01").change(function(){
+				var element = $("option:selected", this);
+				var myTag = element.attr("myTag");
+
+				$('#text').val(myTag);
+			});
+				</script>
+
+
+			  
+				<br>
+				<label for="question"><h6>Enter a query</h6></label>
+				<input class="form-control" type="text" name="question" id="question" >
+			</div>
+
+	        <button type="submit" class="btn btn-primary">Answer</button>
+
+		</form>
+
+	
+
+	</div>
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
