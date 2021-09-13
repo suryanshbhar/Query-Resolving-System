@@ -19,7 +19,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 #######################################################################################
 from sentence_transformers import SentenceTransformer
-model = SentenceTransformer('sentence-transformers/bert-base-nli-stsb-mean-tokens')
+model = SentenceTransformer('sentence-transformers/multi-qa-MiniLM-L6-cos-v1')
 
 def preprocess(text):
     text = re.sub(r'(?<=[.])(?=[^\s])(?=[^0-9])', r' ', text)
