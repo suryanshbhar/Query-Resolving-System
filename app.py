@@ -1,5 +1,5 @@
 from flask import Flask, render_template,url_for, request,redirect,send_file
-from nltk import text
+
 from werkzeug.utils import secure_filename
 import os
 from os import path
