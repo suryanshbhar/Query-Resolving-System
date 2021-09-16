@@ -5,6 +5,7 @@ import os
 from os import path
 ######################################################################################
 import nltk
+nltk.download('all')
 from nltk.corpus import stopwords
 from nltk.tag import pos_tag # for proper noun
 from nltk.tokenize import word_tokenize, sent_tokenize
