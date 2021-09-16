@@ -18,8 +18,13 @@ import sklearn
 from sklearn.metrics.pairwise import cosine_similarity
 
 #######################################################################################
-from sentence_transformers import SentenceTransformer
-model = SentenceTransformer('sentence-transformers/multi-qa-MiniLM-L6-cos-v1')
+from sentence_transformers import SentenceTransformer, models
+
+word_embedding_model = models.Transformer('embeddings', max_seq_length=256)
+pooling_model = models.Pooling(word_embedding_model.get_word_embedding_dimension())
+
+model = SentenceTransformer(modules=[word_embedding_model, pooling_model])
+
 
 def preprocess(text):
     text = re.sub(r'(?<=[.])(?=[^\s])(?=[^0-9])', r' ', text)
