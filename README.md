@@ -1,4 +1,3 @@
 # Query-Resolving-System
-Ds project 1
-<br>
+<p>Ds project 1</p>
 deployed at https://query-resolving-system.herokuapp.com/
