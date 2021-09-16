@@ -36,15 +36,28 @@
 	<div class="container">
 	<h1>Welcome to Query Resolving System</h1>
 	<br>
-	<br>
 	<a class="btn btn-outline-secondary" href="/convert" role="button">Click here to resolve your question</a>
-	<br><br>
-	<i>The website uses the following techniques to answer the query:</i>
 	<br>
+	<br>
+
+	<i>Instructions for users:</i>
 	<br>
 	<ul>
+		<li><i>After clicking on the above button user will be redirected to convert page</i></li>
+		<li><i>User can then either select a sample corpus or provide his custom corpus in the textarea</i></li>
+		<li><i>User id then required to input a query which would be resolved by the application</i></li>
+	</ul>
+	<br>
+	
+
+	<i>The website uses the following techniques to answer the query:</i>
+	<br>
+	<ul>
+		<li><i>Text Preprocessing has been performed via nltk library and cosine_similarity has been computed</i></li>
 		<li><i>Word Tagger is used to resolve one word query along with sentence similarity score</i></li>
-		<li><i>'bert-base-nli-stsb-mean-tokens' sentence transformer model has been used to return contextually similar answers</i></li>
+		<li><i>'multi-qa-MiniLM-L6-cos-v1' sentence transformer model has been used to return contextually similar answers</i></li>
+		<li><i>This transformer maps sentences & paragraphs to a 384 dimensional dense vector space and been trained on 215M (question, answer) pairs from diverse sources</i></li>
+		<li><i>Refer <a href="/convert" role="link">Semantic Search</a> for additional documentation</i></li>
 	</ul>
 	
 
