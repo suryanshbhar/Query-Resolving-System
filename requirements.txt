@@ -16,3 +16,4 @@ torch==1.9.0+cpu
 torchvision==0.10.0+cpu
 urllib3==1.25.8
 Werkzeug==1.0.1
+nltk==3.6.2
