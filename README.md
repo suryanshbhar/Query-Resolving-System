@@ -1,7 +1,8 @@
 # QUERY RESOLVING SYSYTEM
 This webpage illustrates the application of natural language processing.
 The user has to input a corpus with a query to the application and the apllication return the most semantically and contextually similar answers.<br>
-The web application has been deployed using heroku and is available at https://query-resolving-system.herokuapp.com/ 
+The web application has been deployed using heroku and is available at <br>
+https://query-resolving-system.herokuapp.com/ 
 ## Description
 The project basically aims to provide a context limited query answering system.<br>
 Text preprocessing has been done using nltk library.<br>
