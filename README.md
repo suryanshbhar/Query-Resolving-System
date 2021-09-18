@@ -30,7 +30,7 @@ And 'multi-qa-MiniLM-L6-cos-v1' sentence transformer model has been used to retu
 
 
 ## Authors
-Suryansh Bhadwaj
+Suryansh Bhardwaj
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
