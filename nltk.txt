@@ -6,4 +6,3 @@ averaged_perceptron_tagger_ru
 averaged_perceptron_tagger
 rslp
 porter_test
-vader_lexicon
