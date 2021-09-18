@@ -1,4 +1,4 @@
-# QUERY RESOLVING SYSYTEM
+# QUERY RESOLVING SYSTEM
 This webpage illustrates the application of natural language processing.
 The user has to input a corpus with a query to the application and the apllication returns the most semantically and contextually similar answers.<br>
 The web application has been deployed using heroku and is available at <br>
@@ -10,9 +10,10 @@ Further nltk-word tagger has been used to answer one word queries.<br>
 And 'multi-qa-MiniLM-L6-cos-v1' sentence transformer model has been used to return contextually similar answers<br>
 ## Usage
 <ul>
-<li>After visiting the home page user has press the the link to visit the convert page</li>
-<li>At the convert page user can then either select a sample corpus or provide his custom corpus in the textarea</li>
+<li>After visiting the home page user has to press the the link to visit the convert page</li>
+<li>At the convert page the user can then either select a sample corpus or provide his custom corpus in the textarea</li>
 <li>User is then required to input a query which would be resolved by the application</li>
+<li>Application will return an objective answer and top 5 contextually similar answers along with their scores</li>
 </ul>
 
 ## Flowchart Of Methodology
