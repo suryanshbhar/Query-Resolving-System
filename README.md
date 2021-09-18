@@ -14,6 +14,10 @@ And 'multi-qa-MiniLM-L6-cos-v1' sentence transformer model has been used to retu
 <li>User is then required to input a query which would be resolved by the application</li>
 </ul>
 
+## Flowchart Of Methodology
+![](screenshots/Query.jpeg)
+<br>
+<br>
 ## I/O screenshots
 ### Input
 ![](screenshots/input.PNG)
